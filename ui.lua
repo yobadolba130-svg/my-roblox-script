@@ -16,7 +16,7 @@ MainFrame.Name = "MainFrame"
 MainFrame.Parent = ScreenGui
 MainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 MainFrame.Position = UDim2.new(0.05, 0, 0.1, 0)
-MainFrame.Size = UDim2.new(0, 260, 0, 420)
+MainFrame.Size = UDim2.new(0, 260, 0, 430)
 MainFrame.BorderSizePixel = 0
 MainFrame.Active = true
 MainFrame.Draggable = true
@@ -33,7 +33,7 @@ Title.BackgroundTransparency = 1
 Title.Position = UDim2.new(0, 12, 0, 0)
 Title.Size = UDim2.new(1, -50, 1, 0)
 Title.Font = Enum.Font.SourceSansBold
-Title.Text = "Rostov God Menu v7"
+Title.Text = "Rostov God Menu v8"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 16
 Title.TextXAlignment = Enum.TextXAlignment.Left
@@ -54,7 +54,7 @@ ScrollingFrame.Parent = MainFrame
 ScrollingFrame.BackgroundTransparency = 1
 ScrollingFrame.Position = UDim2.new(0, 0, 0, 40)
 ScrollingFrame.Size = UDim2.new(1, 0, 1, -45)
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 520)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 560)
 ScrollingFrame.ScrollBarThickness = 6
 
 UIListLayout.Parent = ScrollingFrame
@@ -114,8 +114,7 @@ _G.CreateInput = function(placeholder, defaultValue, callback)
     okButton.TextSize = 12
     okButton.BorderSizePixel = 0
     okButton.MouseButton1Click:Connect(function()
-        local num = tonumber(textBox.Text)
-        if num then callback(num) end
+        callback(textBox.Text)
     end)
 end
 
